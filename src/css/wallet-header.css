@@ -1,0 +1,23 @@
+.container-header{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  /* background-color: brown; */
+  border: 3px solid blue;
+  padding: 0 10px 0 10px; 
+}
+
+.logo-trybe{
+  border: 3px solid red;
+  background-color: black;
+  color: blueviolet;
+  font-size: 30px;
+}
+
+.inputs-header{
+  display: flex;
+  border: 3px solid green;
+  justify-content: space-around;
+  align-items: center;
+  width: 300px;
+}

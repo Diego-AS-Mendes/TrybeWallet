@@ -2,6 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import LoginBtn from '../components/LoginBtn';
 import LoginInput from '../components/Logininput';
+import '../css/login.css';
 
 class Login extends React.Component {
   constructor(props) {
@@ -34,7 +35,7 @@ class Login extends React.Component {
   infoInput() {
     const { password, email } = this.state;
     return (
-      <>
+      <div className='container-input' >
         <LoginInput
           type="email"
           placeholder="exemplo@email.com"
@@ -51,11 +52,10 @@ class Login extends React.Component {
           id="password"
           value={ password }
           handleChange={ this.handleChange }
-        />
-      </>
+          />
+      </div>
     );
   }
-
   displayButton() {
     const { email, buttonDisabled } = this.state;
     const { history } = this.props;
@@ -68,11 +68,14 @@ class Login extends React.Component {
     );
   }
 
+
   render() {
     return (
-      <div>
+      <div className='container-page-login'>
+        <div className='container-login'>
         {this.infoInput()}
         {this.displayButton()}
+        </div>
       </div>
     );
   }
